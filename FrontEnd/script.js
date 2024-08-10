@@ -20,8 +20,8 @@ function mostrarCamara() {
                 currentStream = stream;
                 video.srcObject = currentStream;
                 procesarCamara();
-                setTimeout(attendance_do, 5000)
-                // setTimeout(new_student, 5000)
+                //setTimeout(attendance_do, 5000)
+                setTimeout(new_student, 5000)
             })
             .catch(function(err){
                 alert("No he podido utilizar la camara :(")
