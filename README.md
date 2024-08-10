@@ -17,16 +17,17 @@ Este proyecto es un Sistema de Monitoreo de Asistencia y Estado de Ánimo de Est
 
 ## Installation
 
-Instala las siguientes librerias necesarias 
-
+1. #### Clonar el repositorio:
 ```bash
-  pip install fastapi
-  pip install deepface
-  pip install retina-face
-  pip install pymongo
-  pip install pillow
-  pip install matplotlib
-  pip install pandas
-  pip install uvicorn 
+git clone https://github.com/tuusuario/tu-repositorio.git
+cd tu-repositorio
+```
+2. #### Instalar dependencias:
+```bash
+pip install -r requirements.txt
+```
+3. #### Dentro de la carpeta del proyecto ejecuta la aplicación: 
+```bash
+uvicorn main:app --reload
 ```
     
