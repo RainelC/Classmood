@@ -1,0 +1,10 @@
+fastapi
+deepface
+retina-face
+pymongo
+pillow
+matplotlib
+pandas
+uvicorn
+python-dotenv
+
