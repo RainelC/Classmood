@@ -15,7 +15,7 @@ Este proyecto es un Sistema de Monitoreo de Asistencia y Estado de Ánimo de Est
 **Front-End:** HTML, CSS, JS
 
 
-## Installation
+## Instalación 
 
 1. #### Clonar el repositorio:
 ```bash
@@ -31,3 +31,8 @@ pip install -r requirements.txt
 uvicorn main:app --reload
 ```
     
+## Usos
+
+Al ejecutar la aplicación se le brindara una dirrecion, la cual debe pegar en el navegador y agregando "/docs" al final de esta, para poder ver la documentación completa de la API  
+
+
