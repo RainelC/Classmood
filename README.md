@@ -37,14 +37,12 @@ Al ejecutar la aplicación se le brindará una dirección, la cual debe pegar en
 
 Al abrir el archivo index.html podrá realizar una prueba para crear un estudiante con la información biométrica en este caso el rostro del estudiante.
 
-Si desea probar la función de pasar lista y reconocer las emociones de los estudiantes diríjase al script.js y en la función ``` javascript
-mostrarCamara()
-```  comentar la línea 23 y descomentar la línea 24
+Si desea probar la función de pasar lista y reconocer las emociones de los estudiantes diríjase al script.js y en la función ``` javascript mostrarCamara() ```  comentar la línea 23 y descomentar la línea 24.
 
 ```javascript
-    procesarCamara();
-    //setTimeout(attendance_do, 5000)
-    setTimeout(new_student, 5000)
+procesarCamara();
+//setTimeout(attendance_do, 5000)
+setTimeout(new_student, 5000)
 ```
 
 
