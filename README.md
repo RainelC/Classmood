@@ -33,6 +33,6 @@ uvicorn main:app --reload
     
 ## Usos
 
-Al ejecutar la aplicación se le brindara una dirrecion, la cual debe pegar en el navegador y agregando "/docs" al final de esta, para poder ver la documentación completa de la API  
+Al ejecutar la aplicación se le brindará una dirección, la cual debe pegar en el navegador y agregando "/docs" al final de esta, para poder ver la documentación completa de la API 
 
 
