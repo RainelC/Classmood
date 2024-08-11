@@ -20,7 +20,7 @@ Este proyecto es un Sistema de Monitoreo de Asistencia y Estado de Ánimo de Est
 1. #### Clonar el repositorio:
 ```bash
 git clone https://github.com/RainelC/Classmood
-cd tu-repositorio
+cd Classmood
 ```
 2. #### Instalar dependencias:
 ```bash
