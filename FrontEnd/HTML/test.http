@@ -1,0 +1,7 @@
+POST https://classmood-wdmz.onrender.com/login HTTP/1.1
+content-type: application/json
+
+{
+  "email": "evercu@mail.com",
+  "password": "3v3rCurr13l"
+}

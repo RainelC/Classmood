@@ -1,0 +1,99 @@
+body {
+  background: url("../imgs/degradado.png") no-repeat center center fixed;
+  background-size: cover;
+}
+
+#f-table {
+  position: relative;
+  background-color: #434240;
+  border-top-right-radius: 36px;
+  border-top-left-radius: 36px;
+  height: 110vh;
+  width: 80%;
+  top: 50px;
+}
+
+#f-page {
+  padding: 0;
+  position: relative;
+  background-color: #f2efe7;
+  border-top-right-radius: 36px;
+  border-top-left-radius: 36px;
+  height: 100vh;
+  width: 90%;
+  top: 70px;
+}
+
+#f-clamp {
+  background-color: #cccac4;
+  border-radius: 36px;
+  height: 20vh;
+}
+
+.f-circle {
+  background-color: black;
+  position: relative;
+  top: -25px;
+  width: 55px;
+  height: 55px;
+  border-radius: 100%;
+}
+
+.body-f-page {
+  color: #2a3233;
+}
+
+.body-f-page h1 {
+  font-size: 6.2vw;
+}
+
+.body-f-page h2 {
+  font-size: 3vw;
+}
+
+input {
+  padding-left: 15px;
+  background: transparent;
+  border: none;
+  border-bottom: solid #2a3233;
+  width: 60%;
+  font-size: 2vw;
+}
+
+input[type="password"] {
+  width: 52%;
+  color: transparent;
+  /* z-index: 1; */
+}
+
+input:focus-visible {
+  outline: none;
+}
+
+div#div-password {
+  position: absolute;
+  object-fit: contain;
+  overflow: hidden;
+}
+
+.btn {
+  background-color: #2a3233;
+  color: #f8f8f8;
+  border-radius: 50px;
+  font-size: 2vw;
+  width: 200px;
+  margin-top: 4%;
+}
+
+.input-form{
+    position: relative;
+    left: 117px;
+}
+
+/* #div-password{
+     background-color: #3064cc; 
+} */
+
+/* #div-password img{
+    filter: invert(100%) sepia(0%) saturate(2%) hue-rotate(131deg) brightness(103%) contrast(101%);
+} */
