@@ -145,6 +145,14 @@ def attendance_post(data: Attendance_data, response: Response):
     else:
         response.status_code = status.HTTP_400_BAD_REQUEST
 
+
+
+if __name__ == "__main__":
+    port = int(os.getenv("PORT", 8000))
+    uvicorn.run(app, host="0.0.0.0", port=port)
+
+
+
 @app.post("/login")
 def login_user(credentials: Credentials, response: Response):
     Success, message, user = ValidUser(credentials)
