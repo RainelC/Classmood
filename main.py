@@ -2,6 +2,7 @@ from fastapi import FastAPI, Response, status
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from logic import *
+from serialize import serialize_doc
 
 app = FastAPI()
 
@@ -159,7 +160,7 @@ def login_user(credentials: Credentials, response: Response):
 
     if Success:
         response.status_code = status.HTTP_201_CREATED
-        return user
+        return serialize_doc(user)
     else:
         if (message == "Unauthorized"):
             response.status_code = status.HTTP_401_UNAUTHORIZED
