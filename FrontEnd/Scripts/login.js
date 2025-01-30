@@ -1,4 +1,5 @@
-const url = "https://classmood-wdmz.onrender.com";
+// const url = "https://classmood-wdmz.onrender.com";
+const url = "http://127.0.0.1:8000";
 const form = document.querySelector("form");
 const alertError = document.getElementById("error");
 
@@ -9,17 +10,17 @@ form.addEventListener("submit", (event) => {
   const formData = new FormData(form);
   const loginData = Object.fromEntries(formData);
 
-  fetch(url + "/login", {
+  fetch(url + "/token", {
     method: "POST",
     headers: {
-      "Content-Type": "application/json",
+      "Content-Type": "application/x-www-form-urlencoded",
     },
-    body: JSON.stringify(loginData),
+    body: new URLSearchParams(loginData).toString(),
   })
     .then((res) => {
       console.log(res.status);
       switch (res.status) {
-        case 201:
+        case 200:
           return res.json();
         case 400:
           alertError.firstElementChild.innerHTML = `Invalid email or password.`;

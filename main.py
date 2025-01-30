@@ -20,7 +20,6 @@ app.add_middleware(
 
 #-------Security-------#
 
-
 @app.post("/token")
 def login(form_data: Annotated[OAuth2PasswordRequestForm, Depends()]):  
     credentials = Credentials(email=form_data.username, password=form_data.password) 
@@ -36,7 +35,7 @@ def login(form_data: Annotated[OAuth2PasswordRequestForm, Depends()]):
         else:
             raise HTTPException(status_code=400, detail="BAD_REQUEST")
       
-@app.get("/user/profile")
+@app.get("/me")
 def profile(my_user: Annotated[dict, Depends(decode_token)]):
     return my_user
 

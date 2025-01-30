@@ -1,3 +1,5 @@
+// const url = "https://classmood-wdmz.onrender.com";
+const url = "http://127.0.0.1:8000";
 const form = document.querySelector("form");
 const inputt = document.getElementById("input-password");
 

@@ -1,7 +1,9 @@
-POST https://classmood-wdmz.onrender.com/login HTTP/1.1
-content-type: application/json
+# POST https://classmood-wdmz.onrender.com/login HTTP/1.1
+POST  http://127.0.0.1:8000/token HTTP/1.1
+Accept: application/json
+Accept: application/x-www-form-urlencoded
+# Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiRXZlciIsImVtYWlsIjoiZXZlcmN1QG1haWwuY29tIn0.ynrIg7s6G3PSrl4PnwvEHyOYSHr-shePJdhGY7ehoh0
 
 {
-  "email": "evercu@mail.com",
-  "password": "3v3rCurr13l"
+    grant_type=password&username=evercu%40mail.com&password=3v3rCurr13l&scope=&client_id=string&client_secret=string
 }
