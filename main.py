@@ -1,8 +1,13 @@
-from fastapi import FastAPI, Response, status
+from fastapi import FastAPI, Response, status, Depends
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.security import OAuth2PasswordRequestForm
+from fastapi.exceptions import HTTPException
 from pydantic import BaseModel
+import uvicorn
 from logic import *
 from serialize import serialize_doc
+from typing import Annotated
+from auth_tokens import enconde_token, decode_token
 
 app = FastAPI()
 
@@ -13,10 +18,27 @@ app.add_middleware(
   allow_headers = ["*"]
 )
 
-# @app.get("/students")
-# def index():    
-#     return {"response": "Hello world"}
+#-------Security-------#
 
+
+@app.post("/token")
+def login(form_data: Annotated[OAuth2PasswordRequestForm, Depends()]):  
+    credentials = Credentials(email=form_data.username, password=form_data.password) 
+    Success, message, user = ValidUser(credentials)
+
+    if Success:
+        HTTPException.status_code = status.HTTP_200_OK
+        token = enconde_token({"name": user['name'],"email": user['email']})
+        return {"access_token": token}
+    else:
+        if (message == "Unauthorized"):
+            raise HTTPException(status_code=401, detail="UNAUTHORIZED")
+        else:
+            raise HTTPException(status_code=400, detail="BAD_REQUEST")
+      
+@app.get("/user/profile")
+def profile(my_user: Annotated[dict, Depends(decode_token)]):
+    return my_user
 
 #-------Students-------#
 

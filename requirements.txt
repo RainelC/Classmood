@@ -8,4 +8,5 @@ pandas
 uvicorn
 python-dotenv
 tf-keras
+python-multipart
 
